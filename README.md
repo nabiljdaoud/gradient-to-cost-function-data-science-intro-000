@@ -13,7 +13,7 @@ And RSS takes the difference between $mx_i + b$, the $y_i$ value our regression 
 
 ![regression-scatter.png](./regression-scatter.png)
 
-And we when we just plotted how RSS changes as we change one variable of our regression line, $m$ or $b$, we note how this looks like a curve, and call it our cost curve.
+And we when we plotted how RSS changes as we change one variable of our regression line, $m$ or $b$, we note how this looks like a curve, and call it our cost curve.
 
 
 ```python
@@ -46,9 +46,9 @@ Allowing us to change both variables, $m$ and $b$ means calculating how RSS vari
 Because the RSS is a function of how we change our values of $m$ and $b$, we can express this relationship mathematically by saying the cost function, $J$ is the following:  
 $$J(m, b) = \sum_{i=1}^{n}(y_i - (mx_i + b))^2$$
 
-In the function above, $J$ is a function of $m$ and $b$. $J$ just represents the residual sum of squares, which varies as the $m$ and $b$ variables of our regression line are changed.  
+In the function above, $J$ is a function of $m$ and $b$. $J$ represents the residual sum of squares, which varies as the $m$ and $b$ variables of our regression line are changed.  
 
-Just our other multivariable functions we have seen thus far, we can display it in three dimensions, and it looks like the following.
+Just as our other multivariable functions we have seen thus far, we can display it in three dimensions, and it looks like the following.
 
 ![](./gradientdescent.png)
 
@@ -137,7 +137,7 @@ Ok, so now we have our two partial derivatives for $\nabla J(m, b)$:
 $$ \frac{dJ}{dm}J(m,b) = -2*x(y - (mx + b )) $$
 $$ \frac{dJ}{db}J(m,b) = -2*(y - (mx + b)) $$
 
-And as $mx + b$ = is just our regression line, we can simplify these formulas to be:
+And as $mx + b$ = is our regression line, we can simplify these formulas to be:
 
 $$ \frac{dJ}{dm}J(m,b) = -2*x(y - \overline{y})  = -2x*\epsilon$$
 $$ \frac{dJ}{db}J(m,b) = -2*(y - \overline{y}) = -2\epsilon$$
